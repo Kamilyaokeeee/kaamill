@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background: url("images/фон.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #6dea66; 
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    animation: dashPulse 2s infinite;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+@keyframes dashPulse{
+    0%, 100% { border-color: #89ea66; }
+    50% { border-color: #4fa24b; }
+}
+h2{
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"]{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus{
+    outline: none;
+    border-color: #4cbc64;
+}
+
+button{
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #74f581, #6dff83);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 480px){
+    .form-container{
+        margin: 20px;
+        padding: 30px 20px;
+    }
+}
+.form-container{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+input:focus{
+    border-color: #70ff88;
+    box-shadow: 0 0 5px rgba(57, 237, 105, 0.5);
+    outline: none; 
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    animation: flicker 2s infinite alternate;
+}
+@keyframes flicker{
+    from{
+        text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+    }
+    to{
+        text-shadow: 0 0 15px rgba(0, 255, 13, 0.496), 0 0 5px rgba(119, 255, 0, 0.5);
+    }
+}

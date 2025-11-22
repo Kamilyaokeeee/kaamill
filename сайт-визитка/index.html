@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="userForm" action="начальная.html">
+            <h2>Заполните данные для входа</h2>
+            <div class="input-group">
+                <label for="name">Имя *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="birthdate">Дата рождения *</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Номер телефона *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX" required>
+            </div>
+            <button type="submit">Продолжить</button>
+        </form>
+    </div>
+</body>
+</html>
